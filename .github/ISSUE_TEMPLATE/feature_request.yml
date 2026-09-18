@@ -1,0 +1,25 @@
+name: Solicitar una funcionalidad
+description: Proponer una mejora
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Recordá el límite de privacidad (BOUNDARY.md): este repo es solo el
+        adaptador público, sin lógica ni datos de cliente.
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema o necesidad
+      description: ¿Qué querés lograr y por qué?
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+      description: Cómo lo resolverías.
+    validations:
+      required: false

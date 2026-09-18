@@ -1,0 +1,35 @@
+name: Reportar un bug
+description: Reportar un problema reproducible
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No incluyas datos de cliente, secretos ni IPs internas. Para
+        vulnerabilidades de seguridad, usá Security → Report a vulnerability.
+  - type: textarea
+    id: que-pasa
+    attributes:
+      label: Qué pasa
+      description: Comportamiento actual vs esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Pasos para reproducir
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: entorno
+    attributes:
+      label: Entorno
+      placeholder: "versión, SO, Python"
+    validations:
+      required: false
