@@ -17,3 +17,9 @@ result = client.submit("cargill", {"campo": "valor"})
 
 Requiere las variables de entorno `CLIENT_FEATURES_BASE_URL` y
 `CLIENT_FEATURES_TOKEN`. Sin ellas, el cliente falla cerrado.
+
+## Licencia
+
+Software propietario. © 2026 Lodapy. Todos los derechos reservados. No se
+concede licencia de uso, copia, modificación ni distribución sin autorización
+escrita del titular.
