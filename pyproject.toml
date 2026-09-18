@@ -1,0 +1,14 @@
+[project]
+name = "bio-logia-adapter"
+version = "0.1.0"
+description = "Adaptador público mínimo al backend privado de client-features de BIO-LOGIA."
+requires-python = ">=3.9"
+dependencies = ["httpx>=0.24"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["client_features_adapter"]

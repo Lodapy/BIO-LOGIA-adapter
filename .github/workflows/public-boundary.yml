@@ -1,0 +1,18 @@
+name: public-boundary
+on: [push, pull_request]
+
+jobs:
+  forbidden-paths:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bloquear archivos sensibles de cliente
+        shell: bash
+        run: |
+          set -euo pipefail
+          forbidden='(cliente_intake|intake_cargill|agro_intake|(^|/)intake\.py|bovinoscan-intake|test_intake_agro|\.(ogg|opus|m4a|mp3|wav)$|(^|/)\.env($|\.))'
+          if git ls-files | grep -E "$forbidden"; then
+            echo "::error::Archivos sensibles de cliente no permitidos en el repo publico"
+            exit 1
+          fi
+          echo "OK: sin paths sensibles de cliente"
